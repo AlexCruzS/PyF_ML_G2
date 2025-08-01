@@ -121,8 +121,8 @@ pyf_ml_g2/
 
 ### **🏛 Core Architecture**
 - **🐍 Backend:** Python 3.9+, FastAPI, asyncio
-- **📊 Frontend:** Streamlit, Plotly, Folium Maps
-- **🤖 ML:** scikit-learn, XGBoost, LightGBM, MLflow
+- **📊 Frontend:** Streamlit, Plotly
+- **🤖 ML:** scikit-learn, MLflow
 - **🗄️ Database:** PostgreSQL (AWS RDS compatible)
 
 ### **🚀 MLOps & DevOps**
@@ -131,10 +131,9 @@ pyf_ml_g2/
 - **📊 Monitoring:** Prometheus, Grafana
 - **🔄 CI/CD:** GitHub Actions
 
-### **🌍 Geospatial & Data**
-- **📍 Geocoding:** Geopy, Folium
+### **🌍 Geospatial & Data** 
 - **📊 Visualization:** Plotly, Matplotlib, Seaborn
-- **💾 Data Processing:** Pandas, NumPy, PyArrow
+- **💾 Data Processing:** Pandas, NumPy
 
 ---
 
