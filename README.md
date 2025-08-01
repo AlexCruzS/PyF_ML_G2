@@ -131,7 +131,7 @@ pyf_ml_g2/
 - **📊 Monitoring:** Prometheus, Grafana
 - **🔄 CI/CD:** GitHub Actions
 
-### **🌍 Geospatial & Data** 
+### **📊 Data Analyst** 
 - **📊 Visualization:** Plotly, Matplotlib, Seaborn
 - **💾 Data Processing:** Pandas, NumPy
 
@@ -408,28 +408,21 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ---
 
-## **👥 Equipo de Desarrollo**
+## 👥 Autores
 
-### **🏛 Arquitectura & Backend**
-- **Lead Developer** - Arquitectura Hexagonal y DDD
-- **MLOps Engineer** - Pipeline ML y deployment
+- **Grupo 2** - Proyecto de Machine Learning
+- **Alex Cruz Salirrosas** - Científico de Datos 
+- **Tirso Villanueva Ortiz** - Arquitecto de Software
+- **Zaida Doria Delgado** - Especialista en Producto / UX
+- **Wilson Guevara Garay** - Desarrollador Python frontend
+- **Ronald Canchanya Valenzuela** - Ingeniero/a MLOps / Backend
 
-### **🤖 Machine Learning**
-- **ML Engineer** - Modelos y Feature Engineering
-- **Data Scientist** - Análisis y validación
+## 🙏 Agradecimientos
 
-### **🚀 DevOps & Infrastructure**
-- **DevOps Engineer** - CI/CD y containerización
-- **Cloud Engineer** - Infrastructure y escalabilidad
-
----
-
-## **🙏 Agradecimientos**
-
-- **Comunidad MLflow** por el framework de ML lifecycle
-- **FastAPI** por la documentación automática
-- **Streamlit** por facilitar dashboards interactivos
-- **Proyecto Taxi Duration Predictor** por la inspiración arquitectural
+- Docente curso de Machine Learning
+- Comunidad de MLflow
+- Documentación de Streamlit
+- Principios de Arquitectura Hexagonal
 
 ---
 
