@@ -1,7 +1,4 @@
 # 🏠 PyF_ML_G2 - Sistema MLOps para Predicción de Precios Inmobiliarios
-
-[![Model Deployment](https://github.com/tu-usuario/PyF_ML_G2/workflows/Model%20Deployment/badge.svg)](https://github.com/tu-usuario/PyF_ML_G2/actions)
-[![Release](https://github.com/tu-usuario/PyF_ML_G2/workflows/Release/badge.svg)](https://github.com/tu-usuario/PyF_ML_G2/actions)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.103%2B-green.svg)](https://fastapi.tiangolo.com)
