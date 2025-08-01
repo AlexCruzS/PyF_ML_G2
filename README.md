@@ -197,19 +197,18 @@ Después de ejecutar `python main.py`:
 
 ## **📊 Ejemplo de Uso - API**
 
-### **Predicción de Precio**
+### **Predicción de Precio de Propiedad**
 
 ```bash
 curl -X POST http://localhost:8000/predict \
   -H "Content-Type: application/json" \
   -d '{
-    "address": "123 Main St, Lima, PE",
-    "area_m2": 120.5,
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "floors": 2,
-    "property_type": "Single Family",
-    "garage_spaces": 1
+    "assessed_value": 280000,
+    "area_m2": 155.0,
+    "meses_en_venta": 6,
+    "nro_habitaciones": 4,
+    "nro_pisos": 2,
+    "property_type": "Single Family"
   }'
 ```
 
@@ -217,18 +216,93 @@ curl -X POST http://localhost:8000/predict \
 
 ```json
 {
-  "prediction_id": "pred_123abc",
-  "predicted_value": 185750.30,
-  "confidence_score": 0.89,
-  "confidence_level": "high",
-  "model_name": "RandomForest",
-  "model_version": "v1.2.3",
-  "comparable_properties": 8,
-  "market_analysis": {
-    "avg_price_per_m2": 1543.25,
-    "neighborhood_trend": "increasing"
-  }
+  "prediction_id": "pred_8a9b2c3d",
+  "predicted_value": 295750.50,
+  "model_name": "RandomForest_v1",
+  "model_params": {
+    "n_estimators": 100,
+    "max_depth": 5
+  },
+  "input_features": {
+    "assessed_value": 280000,
+    "area_m2": 155.0,
+    "meses_en_venta": 6,
+    "nro_habitaciones": 4,
+    "nro_pisos": 2,
+    "property_type": "Single Family"
+  },
+  "prediction_timestamp": "2025-01-08T16:45:32Z"
 }
+```
+
+### **Predicción en Lote (Múltiples Propiedades)**
+
+```bash
+curl -X POST http://localhost:8000/predict/batch \
+  -H "Content-Type: application/json" \
+  -d '{
+    "properties": [
+      {
+        "assessed_value": 280000,
+        "area_m2": 155.0,
+        "meses_en_venta": 6,
+        "nro_habitaciones": 4,
+        "nro_pisos": 2,
+        "property_type": "Single Family"
+      },
+      {
+        "assessed_value": 350000,
+        "area_m2": 180.0,
+        "meses_en_venta": 3,
+        "nro_habitaciones": 3,
+        "nro_pisos": 1,
+        "property_type": "Residential"
+      }
+    ]
+  }'
+```
+
+### **Respuesta de Predicción en Lote**
+
+```json
+{
+  "batch_id": "batch_xyz789",
+  "predictions": [
+    {
+      "property_index": 0,
+      "predicted_value": 295750.50
+    },
+    {
+      "property_index": 1,
+      "predicted_value": 368200.75
+    }
+  ],
+  "model_name": "RandomForest_v1",
+  "total_properties": 2,
+  "processing_time_ms": 45
+}
+```
+
+### **📝 Campos de Entrada Requeridos**
+
+| Campo | Tipo | Descripción | Ejemplo |
+|-------|------|-------------|---------|
+| `assessed_value` | `float` | Valor tasado oficial (USD) | `280000` |
+| `area_m2` | `float` | Área de la propiedad en m² | `155.0` |
+| `meses_en_venta` | `int` | Meses que lleva en el mercado | `6` |
+| `nro_habitaciones` | `int` | Número de habitaciones | `4` |
+| `nro_pisos` | `int` | Número de pisos/plantas | `2` |
+| `property_type` | `string` | Tipo: "Single Family" o "Residential" | `"Single Family"` |
+
+### **⚠️ Validaciones Automáticas**
+
+- `assessed_value` > 0
+- `area_m2` > 0  
+- `meses_en_venta` ≥ 0
+- `nro_habitaciones` ≥ 1
+- `nro_pisos` ≥ 1
+- `property_type` debe ser "Single Family" o "Residential"
+
 ```
 
 ---
