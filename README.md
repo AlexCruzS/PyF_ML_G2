@@ -410,7 +410,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 👥 Autores
 
-- **Grupo 2** - Proyecto de Machine Learning
+**Grupo 2** - Proyecto de Machine Learning  
 - **Alex Cruz Salirrosas** - Científico de Datos 
 - **Tirso Villanueva Ortiz** - Arquitecto de Software
 - **Zaida Doria Delgado** - Especialista en Producto / UX
